@@ -43,7 +43,7 @@ local palettes = {
     -- These colors have 3 shades: base, bright, and dim
     --
     -- Defining just a color defines it's base color
-    red = "#ff0000",
+    red = "#EB5353",
   },
   nightfox = {
     -- A specific style's value will be used over the `all`'s value

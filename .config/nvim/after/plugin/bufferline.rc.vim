@@ -1,5 +1,6 @@
 lua << EOF
     vim.opt.termguicolors = true
+    local bufdelete = require('bufdelete')
     require('bufferline').setup {
         options = {
             mode = "buffers",

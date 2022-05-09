@@ -103,10 +103,12 @@ alias ll="ls -al"
 alias nim="nvim"
 alias gitcm="git checkout master"
 alias gitc="git checkout"
-alias gitcb="git checkout -b"
+alias gitcb="git checkout -q -b"
 alias gitb="git branch"
 alias gitpl="git pull"
 alias gitp="git push"
+alias gitbd="git branch -d"
+alias gitba="git branch -a"
 # autojump alise
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 

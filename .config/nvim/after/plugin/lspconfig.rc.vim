@@ -216,7 +216,7 @@ nvim_lsp.diagnosticls.setup {
         rootPatterns = { '.git' },
         -- requiredFiles: { 'prettier.config.js' },
         args = { '--stdin', '--stdin-filepath', '%filename' }
-      }
+      },
     },
     formatFiletypes = {
       css = 'prettier',

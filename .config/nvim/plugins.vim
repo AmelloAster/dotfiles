@@ -33,9 +33,10 @@ Plug 'morhetz/gruvbox'
 Plug 'psliwka/vim-smoothie'
 Plug 'tpope/vim-repeat'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'junegunn/vim-easy-align'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'dense-analysis/ale'
+Plug '907th/vim-auto-save'
 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
@@ -60,7 +61,6 @@ if has("nvim")
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'hoob3rt/lualine.nvim'
   Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   Plug 'kyazdani42/nvim-tree.lua'
@@ -84,6 +84,8 @@ if has("nvim")
   Plug 'simrat39/rust-tools.nvim'
   Plug 'gelguy/wilder.nvim'
   Plug 'karb94/neoscroll.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'fedepujol/move.nvim'
 
 endif
 
