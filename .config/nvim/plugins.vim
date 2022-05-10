@@ -13,7 +13,6 @@ Plug 'neoclide/coc-highlight'
 Plug 'asvetliakov/vim-easymotion'
 Plug 'preservim/tagbar' " Tagbar for code navigation
 Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple vim-multiple-cursors
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'tpope/vim-surround' " Surrounding ysw)
 Plug 'preservim/nerdtree' " NerdTree
@@ -30,13 +29,14 @@ Plug 'liuchengxu/vim-clap'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'dyng/ctrlsf.vim'
 Plug 'morhetz/gruvbox'
-Plug 'psliwka/vim-smoothie'
 Plug 'tpope/vim-repeat'
 Plug 'leafgarland/typescript-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dense-analysis/ale'
 Plug '907th/vim-auto-save'
+Plug 'mhinz/vim-startify'
+Plug 'yuttie/comfortable-motion.vim'
 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
@@ -77,15 +77,13 @@ if has("nvim")
   Plug 'numToStr/Comment.nvim'
   Plug 'phaazon/hop.nvim'
   Plug 'folke/trouble.nvim'
-  Plug 'aserowy/tmux.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-  Plug 'jose-elias-alvarez/null-ls.nvim'
   Plug 'EdenEast/nightfox.nvim'
   Plug 'simrat39/rust-tools.nvim'
   Plug 'gelguy/wilder.nvim'
-  Plug 'karb94/neoscroll.nvim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'fedepujol/move.nvim'
+  Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 endif
 

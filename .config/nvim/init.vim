@@ -22,7 +22,7 @@ set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
-set tw=120 
+set tw=120
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
 "let loaded_matchparen = 1
@@ -188,9 +188,9 @@ function! SetBackgroundMode(...)
     let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
     if s:mode ==? "Dark"
         let s:new_bg = "dark"
-        colorscheme nightfox
+       " colorscheme nordfox
     else
-      colorscheme dawnfox
+      " colorscheme dawnfox
     endif
     if &background !=? s:new_bg
         let &background = s:new_bg
@@ -201,11 +201,12 @@ call timer_start(30000, "SetBackgroundMode", {"repeat": -1})
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-" let g:nightfox_background = 'medium'
+"  let g:everforest_background = 'soft'
 " For better performance
- " let g:nightfox_better_performance = 1
-  " colorscheme nightfox
-  " everforest gruvbox nightfox dayfox dawnfox
+"  let g:everforest_better_performance = 1
+"  let g:everforest_transparent_background = 1
+  colorscheme catppuccin
+  " everforest gruvbox nightfox dayfox dawnfox catppuccin
 "}}}
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle

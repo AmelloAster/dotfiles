@@ -12,11 +12,9 @@ vim.cmd [[highlight IndentBlanklineIndent6 guifg=#97dbae gui=nocombine]]
 
 require("indent_blankline").setup {
 		space_char_blankline = " ",
-		show_blankline=true,
 		show_current_context = true,
     show_current_context_start = true,
-		show_end_of_line=true,
-    char_highlight_list = {
+		char_highlight_list = {
         "IndentBlanklineIndent1",
         "IndentBlanklineIndent2",
         "IndentBlanklineIndent3",

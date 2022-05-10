@@ -109,6 +109,14 @@ alias gitpl="git pull"
 alias gitp="git push"
 alias gitbd="git branch -d"
 alias gitba="git branch -a"
+alias zej="zellij"
+alias brewup="brew update && brew upgrade"
+alias brewupd="brew update"
+alias brewupg="brew upgrade"
+alias brewupgs="brew upgrade --all"
+alias brewinst="brew install"
+alias brewunst="brew uninstall"
+alias brewrm="brew remove"
 # autojump alise
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
