@@ -65,6 +65,7 @@ end
 
 isNeedToOpenDeno()
 
+
 lsp_installer.on_server_ready(function(server)
   local opts = {
     automatic_installation = true
@@ -83,6 +84,11 @@ lsp_installer.on_server_ready(function(server)
       lint = false,
       unstable = false,
     }
+  end
+
+  if server.name == 'cssls' then
+    opts.on_attach = on_attach
+    opts.filetypes = {'css', 'less', 'scss', 'sass', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'html'}
   end
 
   if server.name == 'tailwindcss' then
@@ -203,7 +209,8 @@ lsp_installer.on_server_ready(function(server)
             inlay_hints_priority = 200, -- priority of the hint extmarks
             inlay_hints_throttle = 150, -- throttle the inlay hint request
             inlay_hints_format = { -- format options for individual hint kind
-                Type = {},
+                Type = {
+                },
                 Parameter = {},
                 Enum = {},
                 Function = {},

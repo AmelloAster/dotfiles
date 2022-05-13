@@ -1,12 +1,13 @@
-if !exists('g:lspconfig')
-  finish
-endif
 
-lua << EOF
+
+local status, nvim_lsp = pcall(require, "lspconfig")
+if not status then return end
+
+
 --vim.lsp.set_log_level("debug")
-EOF
 
-lua << EOF
+
+
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
 local util = require 'lspconfig/util'
@@ -77,5 +78,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
-EOF
 

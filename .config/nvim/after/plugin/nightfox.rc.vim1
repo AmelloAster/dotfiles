@@ -71,22 +71,4 @@ local palettes = {
   },
 }
 
-nightfox.setup({
-    options = {
-        transparent = true,
-        styles = {
-            conditional = "magenta.bright",
-            number = "orange.dim",
-            comments = "italic",
-            keywords = "bold",
-            types = "italic,bold", -- Value is any valid attr-list value `:help attr-list`
-            constants = "NONE",
-            functions = "bold",
-            operators = "bold",
-            strings = "NONE",
-            variables = "NONE",
-        }
-    },
-    palettes = palettes,
-    specs = specs,
-})
+nightfox.setup({})

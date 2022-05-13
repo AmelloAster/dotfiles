@@ -3,18 +3,19 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export TERM='xterm-256color'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="daivasmara"
+ZSH_THEME="spaceship"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" ) daivasmara
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -al"
-alias nim="nvim"
+alias n="nvim"
 alias gitcm="git checkout master"
 alias gitc="git checkout"
 alias gitcb="git checkout -q -b"
@@ -113,10 +114,11 @@ alias zej="zellij"
 alias brewup="brew update && brew upgrade"
 alias brewupd="brew update"
 alias brewupg="brew upgrade"
-alias brewupgs="brew upgrade --all"
-alias brewinst="brew install"
-alias brewunst="brew uninstall"
+alias brewupa="brew upgrade --all"
+alias brewin="brew install"
+alias brewun="brew uninstall"
 alias brewrm="brew remove"
+alias lazy="lazygit"
 # autojump alise
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -152,3 +154,5 @@ noproxy () {
     unset https_proxy
     echo "HTTP Proxy off"
 }
+
+neofetch

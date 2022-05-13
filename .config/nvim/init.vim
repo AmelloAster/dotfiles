@@ -1,6 +1,5 @@
 " ---------------------------------------------------------------------
 
-" init autocmd
 autocmd!
 " set script encoding
 scriptencoding utf-8
@@ -14,7 +13,6 @@ set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
 set autoindent
-set background=dark
 set nobackup
 set hlsearch
 set showcmd
@@ -22,26 +20,33 @@ set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
-set tw=120
+set tw=100
 set shell=zsh
 set backupskip=/tmp/*,/private/tmp/*
 "let loaded_matchparen = 1
 set termguicolors
 set relativenumber
-set mouse=nv
+set mouse=n
+set wrap
+set linebreak
+set colorcolumn=+2,120
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_silent = 1  " do not display the auto-save notification
 let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
+let g:user_emmet_expandabbr_key='<Tab>'
 " incremental substitution (neovim)
 if has('nvim')
   set inccommand=split
 endif
 
 " Suppress appending <PasteStart> and <PasteEnd> when pasting
-set t_BE=
+" set t_BE=
 
 set nosc noru nosm
 " Don't redraw while executing macros (good performance config)
@@ -96,9 +101,9 @@ set cursorline
 "set cursorcolumn
 
 " Set cursor line color on visual mode
-highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
+" highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40
 
-highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
+" highlight LineNr cterm=none ctermfg=240 guifg=#2b506e guibg=#000000
 
 augroup BgHighlight
   autocmd!
@@ -178,26 +183,23 @@ let g:ale_fix_on_save = 1
 
 " Theme "{{{
 " ------------------------------------------------------------------------
-if has('termguicolors')
-  set termguicolors
-endif
 
 " initialize the colorscheme for the first run
-function! SetBackgroundMode(...)
-    let s:new_bg = "light"
-    let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
-    if s:mode ==? "Dark"
-        let s:new_bg = "dark"
-       " colorscheme nordfox
-    else
-      " colorscheme dawnfox
-    endif
-    if &background !=? s:new_bg
-        let &background = s:new_bg
-    endif
-endfunction
-call SetBackgroundMode()
-call timer_start(30000, "SetBackgroundMode", {"repeat": -1})
+" function! SetBackgroundMode(...)
+"     let s:new_bg = "light"
+"     let s:mode = systemlist("defaults read -g AppleInterfaceStyle")[0]
+"     if s:mode ==? "Dark"
+"         let s:new_bg = "dark"
+"         " colorscheme nordfox
+"     else
+"         " colorscheme dawnfox
+"     endif
+"     if &background !=? s:new_bg
+"         let &background = s:new_bg
+"     endif
+" endfunction
+" call SetBackgroundMode()
+" call timer_start(30000, "SetBackgroundMode", {"repeat": -1})
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
@@ -205,10 +207,21 @@ call timer_start(30000, "SetBackgroundMode", {"repeat": -1})
 " For better performance
 "  let g:everforest_better_performance = 1
 "  let g:everforest_transparent_background = 1
-  colorscheme catppuccin
-  " everforest gruvbox nightfox dayfox dawnfox catppuccin
+let g:github_comment_style = "italic"
+let g:github_keyword_style = "italic"
+let g:github_function_style = "italic"
+let g:github_variable_style = "italic"
+let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
+let g:github_transparent = 1
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:github_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+colorscheme github_dimmed
+  " github_dimmed sacredforest everforest gruvbox nightfox dayfox dawnfox catppuccin
 "}}}
-
+hi Normal guibg=NONE ctermbg=NONE
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
@@ -222,7 +235,8 @@ vnoremap 5 :m '>+1<CR>gv==gv
 "}}}
 
 " CTRL-X and SHIFT-Del are Cut
-vnoremap cx "+x
+vnoremap tx "+x
+
 vnoremap <S-Del> "+x
 
 " CTRL-C and CTRL-Insert are Copy
@@ -243,6 +257,7 @@ noremap <C-Tab> <C-W>w
 inoremap <C-Tab> <C-O><C-W>w
 cnoremap <C-Tab> <C-C><C-W>w
 onoremap <C-Tab> <C-C><C-W>w
+
 
 " Extras "{{{
 " ---------------------------------------------------------------------

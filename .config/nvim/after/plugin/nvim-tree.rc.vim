@@ -96,7 +96,7 @@ lua << EOF
       },
       renderer = {
         indent_markers = {
-          enable = false,
+          enable = true,
           icons = {
             corner = "└ ",
             edge = "│ ",
@@ -112,8 +112,8 @@ lua << EOF
         auto_open = true,
       },
       update_focused_file = {
-        enable = false,
-        update_cwd = false,
+        enable = true,
+        update_cwd = true,
         ignore_list = {},
       },
       ignore_ft_on_setup = {},
@@ -122,8 +122,8 @@ lua << EOF
         args = {},
       },
       diagnostics = {
-        enable = false,
-        show_on_dirs = false,
+        enable = true,
+        show_on_dirs = true,
         icons = {
           hint = "",
           info = "",

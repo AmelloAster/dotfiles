@@ -7,7 +7,6 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'cohama/lexima.vim'
-Plug 'sainnhe/everforest'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc-highlight'
 Plug 'asvetliakov/vim-easymotion'
@@ -16,14 +15,12 @@ Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple vim-multiple-cursors
 Plug 'rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'tpope/vim-surround' " Surrounding ysw)
 Plug 'preservim/nerdtree' " NerdTree
-Plug 'tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'github/copilot.vim'
 Plug 'mattn/emmet-vim'
-Plug 'luochen1990/rainbow'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'ranger/ranger'
 Plug 'sheerun/vim-polyglot'
 Plug 'rcarriga/nvim-notify'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vim-clap'
 Plug 'rafamadriz/friendly-snippets'
@@ -39,6 +36,8 @@ Plug 'mhinz/vim-startify'
 Plug 'yuttie/comfortable-motion.vim'
 
 if has("nvim")
+  Plug 'projekt0n/github-nvim-theme'
+  Plug 'folke/which-key.nvim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'tami5/lspsaga.nvim'
   Plug 'williamboman/nvim-lsp-installer'
@@ -59,7 +58,6 @@ if has("nvim")
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'hoob3rt/lualine.nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
@@ -84,6 +82,9 @@ if has("nvim")
   Plug 'fedepujol/move.nvim'
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+  Plug 'p00f/nvim-ts-rainbow'
+  Plug 'nvim-lualine/lualine.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 endif
 

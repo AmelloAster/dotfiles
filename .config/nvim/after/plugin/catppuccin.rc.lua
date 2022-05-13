@@ -3,7 +3,7 @@ if not status then return end
 
 -- configure it
 catppuccin.setup({
-    transparent_background = false,
+    transparent_background = true,
     term_colors = true,
     styles = {
         comments = "italic",
@@ -38,7 +38,7 @@ catppuccin.setup({
         nvimtree = {
             enabled = true,
             show_root = false,
-            transparent_panel = false,
+            transparent_panel = true,
         },
         neotree = {
             enabled = false,
@@ -58,7 +58,7 @@ catppuccin.setup({
         bufferline = true,
         markdown = true,
         lightspeed = false,
-        ts_rainbow = false,
+        ts_rainbow = true,
         hop = true,
         notify = true,
         telekasten = true,
