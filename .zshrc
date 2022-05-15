@@ -119,6 +119,23 @@ alias brewin="brew install"
 alias brewun="brew uninstall"
 alias brewrm="brew remove"
 alias lazy="lazygit"
+
+#alias pm ="pnpm"
+#alias pmi ="pnpm add"
+#alias pmu ="pnpm update"
+#alias pmr ="pnpm remove"
+alias nm="npm"
+alias nmi="npm install"
+alias nmu="npm update"
+alias nmun="npm uninstall"
+alias nms="npm start"
+alias nmr="npm run"
+alias yn="yanr"
+alias yni="yarn add"
+alias yu="yarn upgrade"
+alias yuall="yarn upgrade --latest"
+alias yun="yarn remove"
+alias yunall="yarn remove --production"
 # autojump alise
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -156,3 +173,8 @@ noproxy () {
 }
 
 neofetch
+
+# pnpm
+export PNPM_HOME="/Users/hexin/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
