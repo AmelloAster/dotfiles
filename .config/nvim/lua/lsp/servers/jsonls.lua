@@ -165,19 +165,19 @@ local schemas = {
 
 local jsonls = {}
 
-jsonls.setup = function(opts)
-    opts.settings = {
+jsonls = {
+    settings = {
         json = {
             schemas = schemas,
         },
-    }
-    opts.commands = {
+    },
+    commands = {
         Format = {
             function()
                 vim.lsp.buf.range_formatting({}, { 0, 0 }, { vim.fn.line "$", 0 })
             end,
         },
     }
-end
+}
 
 return jsonls

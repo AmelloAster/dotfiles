@@ -36,22 +36,22 @@ saga.setup {
     diagnostic_prefix_format = "%d. "
 }
 
-local key_map = vim.api.nvim_set_keymap
+local keymap = vim.api.nvim_set_keymap
 
-key_map("n", "<slient>gh", "<cmd>Lspsage lsp_finder<cr>", {})
-key_map("n", "<slient>gr", "<cmd>Lspsage rename<cr>", {})
-key_map("n", "<slient><A-d>", "<cmd>Lspsage preview_definition<cr>", {})
-key_map("v", "<slient><A-d>", "<cmd>Lspsage preview_definition<cr>", {})
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<cr>", {})
+keymap("n", "gr", "<cmd>Lspsaga rename<cr>", {})
+keymap("n", "<A-d>", "<cmd>Lspsaga preview_definition<cr>", {})
+keymap("v", "<A-d>", "<cmd>Lspsaga preview_definition<cr>", {})
 
-key_map("n", "<slient>gs", "<cmd>Lspsage signature_help<cr>", {})
+keymap("n", "gs", "<cmd>Lspsaga signature_help<cr>", {})
 
-key_map("n", "<slient>K", "<cmd>Lspsage hover_doc<cr>", {})
+keymap("n", "K", "<cmd>Lspsaga hover_doc<cr>", {})
 
-key_map("n", "<slient><C-j>", "<cmd>Lspsage diagnostic_jump_text<cr>", {})
-key_map("n", "<slient>cd", "<cmd>Lspsage show_line_diagnostics<cr>", {})
-key_map("n", "<slient>[e", "<cmd>Lspsage diagnostic_jump_next<cr>", {})
-key_map("n", "<slient>]e", "<cmd>Lspsage diagnostic_jump_prev<cr>", {})
+keymap("n", "<C-j>", "<cmd>Lspsaga diagnostic_jump_text<cr>", {})
+keymap("n", "cd", "<cmd>Lspsaga show_line_diagnostics<cr>", {})
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<cr>", {})
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {})
 
 
-key_map("n", "<slient>ca", "<cmd>Lspsage code_action<cr>", {})
-key_map("v", "<slient>ca", "<cmd>Lspsage code_action<cr>", {})
+keymap("n", "ca", "<cmd>Lspsaga code_action<cr>", {})
+keymap("v", "ca", "<cmd>Lspsaga code_action<cr>", {})

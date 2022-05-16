@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 configs.setup {
-    ensure_installed = { "tsx", "toml", "cpp", "c", "python", "go", "markdown", "json", "yaml", "html", "yaml", "scss", "vue", "css", "typescript", "javascript", "typescriptreact", "javascriptreact" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ensure_installed = { "tsx", "toml", "cpp", "c", "python", "go", "markdown", "json", "yaml", "html", "yaml", "scss", "vue", "css", "typescript", "javascript", }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
@@ -14,21 +14,6 @@ configs.setup {
         additional_vim_regex_highlighting = false,
     },
     indent = { enable = false, disable = { "yaml" } },
-    context_commentstring = {
-        enable = true,
-        config = {
-            -- Languages that have a single comment style
-            typescript = "// %s",
-            css = "/* %s */",
-            scss = "/* %s */",
-            html = "<!-- %s -->",
-            svelte = "<!-- %s -->",
-            vue = "<!-- %s -->",
-            json = "",
-        },
-    },
-    -- textobjects extension settings
-    -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     textobjects = {
         swap = {
             enable = false,
@@ -114,5 +99,6 @@ configs.setup {
         enable = false,
     },
 }
+
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

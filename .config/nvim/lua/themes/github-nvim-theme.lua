@@ -7,7 +7,6 @@ theme.setup({
     theme_style = "dimmed",
     transparent = true,
     function_style = "italic",
-    keywords_style = "italic",
     comment_style = "italic",
     variable_style = "italic",
     sidebars = { "qf", "vista_kind", "terminal", "packer" },

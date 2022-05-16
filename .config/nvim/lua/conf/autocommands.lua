@@ -29,4 +29,6 @@ vim.cmd [[
     autocmd!
     autocmd Bufread,BufNewFile *.scss,*.less set filetype=css
   augroup end
+  " transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 ]]

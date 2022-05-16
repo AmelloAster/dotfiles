@@ -5,7 +5,7 @@ end
 
 catppuccin.setup(
     {
-    transparent_background = true,
+    transparent_background = false,
     term_colors = true,
     styles = { -- TODO: style setting doesn't work
         comments = "underline",

@@ -1,6 +1,6 @@
 local sumneko_lua = {}
-sumneko_lua.setup = function (opts)
-    opts.settings = {
+sumneko_lua = {
+    settings = {
 
         Lua = {
             diagnostics = {
@@ -14,6 +14,6 @@ sumneko_lua.setup = function (opts)
             },
         },
     }
-end
+}
 
 return sumneko_lua

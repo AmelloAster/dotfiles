@@ -23,3 +23,5 @@ cnoremap <C-a> <C-C>gggH<C-O>G
 onoremap <C-a> <C-C>gggH<C-O>G
 snoremap <C-a> <C-C>gggH<C-O>G
 xnoremap <C-a> <C-C>ggVG<C-O>G
+
+ActivateAddons vim-snippets snipmate

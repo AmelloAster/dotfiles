@@ -17,7 +17,7 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
-    augroup packer_user_config
+    augroup packer_config
         autocmd!
         autocmd BufWritePost plugins.lua source <afile> | PackerSync
     augroup end
@@ -97,11 +97,19 @@ return packer.startup(function(use)
     use({
         'rcarriga/nvim-notify',
         config = function()
-            require('plugins.notify')
+            require('notify')
             vim.notify = require('notify')
         end,
     })
-
+    use {
+        'rmagatti/auto-session',
+        config = function()
+            require('auto-session').setup {
+                log_level = 'info',
+                auto_session_suppress_dirs = { '~/', '~/Projects' }
+            }
+        end
+    }
     -- code Auxiliary
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use({
@@ -118,13 +126,8 @@ return packer.startup(function(use)
     use "djoshea/vim-autoread"
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use({ 'windwp/nvim-ts-autotag' })
-    use({
-        'lewis6991/spellsitter.nvim',
-        after = 'nvim-treesitter',
-        config = function()
-            require('plugins.spellsitter')
-        end,
-    })
+    use 'ethanholz/nvim-lastplace'
+
 
     -- cmp
     use {
@@ -143,10 +146,7 @@ return packer.startup(function(use)
     use "f3fora/cmp-spell" -- spell check
     use({ 'petertriho/cmp-git', requires = 'nvim-lua/plenary.nvim' })
 
-    -- snippets
-    use "hrsh7th/cmp-vsnip"
-    use "L3MON4D3/LuaSnip" --snippet engine
-    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
 
     -- Debugger
     use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
@@ -160,7 +160,7 @@ return packer.startup(function(use)
     use {
         "lewis6991/gitsigns.nvim",
     }
-    use "sindrets/diffview.nvim"
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 
     -- UI
@@ -203,14 +203,16 @@ return packer.startup(function(use)
     use "voldikss/vim-translator"
     use "mtdl9/vim-log-highlighting"
     use "Pocco81/HighStr.nvim"
+    -- use({
+    --     'projekt0n/circles.nvim',
+    --     requires = { { 'kyazdani42/nvim-web-devicons' }, { 'kyazdani42/nvim-tree.lua', opt = true } },
+    --     config = function()
+    --         require('circles').setup({ icons = { empty = '', filled = '', lsp_prefix = '' } })
+    --     end,
+    -- })
     use({
-        '~/GitHub/projekt0n/circles.nvim',
-        requires = { { 'kyazdani42/nvim-web-devicons' }, { 'kyazdani42/nvim-tree.lua', opt = true } },
-        config = function()
-            require('circles').setup({ icons = { empty = '', filled = '', lsp_prefix = '' } })
-        end,
+        'lewis6991/spellsitter.nvim',
     })
-
     --test
     use "vim-test/vim-test"
     use {
@@ -220,6 +222,18 @@ return packer.startup(function(use)
     use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use "mg979/vim-localhistory"
 
+    -- snip
+    use "Shougo/neosnippet.vim"
+    use "Shougo/neosnippet-snippets"
+    use "Shougo/deoplete.nvim"
+    -- snippets
+    use "hrsh7th/cmp-vsnip"
+    use "L3MON4D3/LuaSnip" --snippet engine
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+    -- tag
+    use "AndrewRadev/tagalong.vim"
+    use "alvan/vim-closetag"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -9,7 +9,6 @@ local servers = {
     'emmet_ls',
     'tsserver',
     'eslint',
-    'tailwindcss',
     'dockerls',
     'denols',
     'rust_analyzer',
@@ -17,23 +16,29 @@ local servers = {
     'cssmodules_ls',
     'html',
     'svelte',
-    'taplo',
-    'volar'
+    'volar',
+    'tailwindcss',
 }
 
-lsp_installer.setup({
-    ensure_installed = servers,
-    automatic_installation = true,
-})
 
-for _, name in ipairs(servers) do
-    -- Specify the default options which we'll use to setup all servers
-    local default_opts = require('lsp.opts')
 
-    -- Enhance the default opts with the server-specific ones
-    pcall(function()
-        require('lsp.servers.' .. name).setup(default_opts)
-    end)
 
-    require('lspconfig')[name].setup(default_opts)
-end
+
+lsp_installer.on_server_ready(function(server)
+    local opts = {
+        on_attach = require("lsp.opts").on_attach,
+        capabilities = require("lsp.opts").capabilities,
+        flags = {
+            debounce_text_changes = 150,
+        }
+    }
+    for _, name in ipairs(servers) do
+        if name == server.name then
+            local status_ok, sopts = pcall(require, 'lsp.servers.' .. name)
+            if status_ok then
+                opts = vim.tbl_deep_extend("keep", sopts, opts)
+            end
+        end
+    end
+    server:setup(opts)
+end)

@@ -10,7 +10,7 @@ toggleterm.setup({
     hide_numbers = false,
     shade_filetypes = {},
     shade_terminals = true,
-    shading_factor = 3,
+    shading_factor = 1,
     start_in_insert = true,
     insert_mappings = true,
     persist_size = true,
@@ -51,7 +51,7 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
+local lazygit = Terminal:new({ cmd = "lazygit", direction = "horizontal" })
 
 -- NOTE: need to install lazygit first
 -- sudo add-apt-repository ppa:lazygit-team/release

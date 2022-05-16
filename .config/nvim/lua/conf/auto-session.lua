@@ -9,7 +9,12 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 auto_session.setup({
     -- 自动加载最后保存的一次会话
     auto_session_enable_last_session = false,
-    pre_save_cmds = { "tabdo NvimTreeClose" }
+    pre_save_cmds = { "tabdo NvimTreeClose" },
+    auto_session_enabled = true,
+    auto_save_enabled = nil,
+    auto_restore_enabled = nil,
+    auto_session_suppress_dirs = nil,
+    auto_session_use_git_branch = nil,
 }
 )
 

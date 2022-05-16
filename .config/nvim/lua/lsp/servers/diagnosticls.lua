@@ -1,8 +1,8 @@
 local diagnostic = {}
 
-diagnostic.setup = function(opts)
-    opts.filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' }
-    opts.init_options = {
+diagnostic = {
+    filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' },
+    init_options = {
         linters = {
             eslint = {
                 command = 'eslint_d',
@@ -54,7 +54,7 @@ diagnostic.setup = function(opts)
             typescriptreact = 'prettier',
             json = 'prettier',
         }
-    }
-end
+    },
+}
 
 return diagnostic

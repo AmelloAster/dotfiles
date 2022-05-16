@@ -4,9 +4,9 @@ if not status_ok then
 end
 
 local tsserver = {}
-tsserver.setup = function (opts)
-    opts.init_options = ts_utils.init_options
-    opts.on_attach = function(client, bufnr)
+tsserver = {
+    init_options = ts_utils.init_options,
+    on_attach = function(client, bufnr)
         -- defaults
         ts_utils.setup({
             debug = false,
@@ -57,10 +57,10 @@ tsserver.setup = function (opts)
 
         -- no default maps, so you may want to define some here
         local opts = { silent = true }
-        vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", ":TSLspOrganize<CR>", opts)
-        vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
-        vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
+        vim.api.nvim_buf_set_keymap(bufnr, "n", "ts", ":TSLspOrganize<CR>", opts)
+        vim.api.nvim_buf_set_keymap(bufnr, "n", "tr", ":TSLspRenameFile<CR>", opts)
+        vim.api.nvim_buf_set_keymap(bufnr, "n", "ti", ":TSLspImportAll<CR>", opts)
     end
-end
+}
 
 return tsserver

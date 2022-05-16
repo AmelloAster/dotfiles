@@ -111,12 +111,12 @@ local mappings = {
 
     ["P"] = { "<cmd>SessionManager load_session<cr>", "Projects" },
 
-    ["t"] = {
+    ["ut"] = {
         "<cmd>UltestSummary<CR>", "Unit Test"
     },
 
     ["o"] = {
-        "<cmd>AerialToggle<CR>", "Outline"
+        "<cmd>SymbolsOutline<CR>", "Outline"
     },
     ["v"] = {
         "<cmd>lua require('telescope').extensions.neoclip.default(require('telescope.themes').get_ivy())<cr>",
@@ -281,7 +281,7 @@ local mappings = {
         --   u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
         --   t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
         --   p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-        lazy = { "<cmd>lua_LAZYGIT_TOGGLE()<cr>", "Lazygit" },
+        l = { "<cmd>lua_LAZYGIT_TOGGLE()<cr>", "Lazygit" },
         f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
         h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
         v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },

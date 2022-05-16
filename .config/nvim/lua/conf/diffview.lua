@@ -4,7 +4,7 @@ if not status_ok then
     vim.notify("diffview not found!")
     return
 end
-local cb = diffview.config.diffview_callback
+local cb = require 'diffview.config'.diffview_callback
 
 diffview.setup {
     diff_binaries = false, -- Show diffs for binaries

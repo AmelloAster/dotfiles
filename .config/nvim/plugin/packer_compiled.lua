@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/AutoSave.nvim",
     url = "https://github.com/Pocco81/AutoSave.nvim"
   },
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["DAPInstall.nvim"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/DAPInstall.nvim",
@@ -89,15 +94,16 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["aerial.nvim"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/aerial.nvim",
-    url = "https://github.com/stevearc/aerial.nvim"
-  },
   ["alpha-nvim"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["auto-session"] = {
+    config = { "\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\15~/Projects\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0" },
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/auto-session",
+    url = "https://github.com/rmagatti/auto-session"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -118,6 +124,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-git"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/cmp-git",
+    url = "https://github.com/petertriho/cmp-git"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -144,6 +155,11 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/cmp-treesitter",
     url = "https://github.com/ray-x/cmp-treesitter"
   },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
+  },
   cmp_luasnip = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
@@ -158,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["deoplete.nvim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/deoplete.nvim",
+    url = "https://github.com/Shougo/deoplete.nvim"
   },
   ["diffview.nvim"] = {
     loaded = true,
@@ -204,16 +225,6 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["litee-calltree.nvim"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/litee-calltree.nvim",
-    url = "https://github.com/ldelossa/litee-calltree.nvim"
-  },
-  ["litee.nvim"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/litee.nvim",
-    url = "https://github.com/ldelossa/litee.nvim"
-  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
@@ -229,15 +240,20 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["neosnippet-snippets"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/neosnippet-snippets",
+    url = "https://github.com/Shougo/neosnippet-snippets"
+  },
+  ["neosnippet.vim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/neosnippet.vim",
+    url = "https://github.com/Shougo/neosnippet.vim"
+  },
   ["neovim-cmake"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/neovim-cmake",
     url = "https://github.com/ravenxrz/neovim-cmake"
-  },
-  ["neovim-session-manager"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
-    url = "https://github.com/Shatur/neovim-session-manager"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -263,11 +279,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
-  ["nvim-comment"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-comment",
-    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -310,14 +321,10 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-notify"] = {
+    config = { "\27LJ\2\n>\0\0\4\0\3\0\t6\0\0\0'\2\1\0B\0\2\0016\0\2\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\vnotify\frequire\0" },
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
-  },
-  ["nvim-spectre"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-spectre",
-    url = "https://github.com/nvim-pack/nvim-spectre"
   },
   ["nvim-transparent"] = {
     loaded = true,
@@ -343,6 +350,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -381,6 +393,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/sniprun",
     url = "https://github.com/michaelb/sniprun"
+  },
+  ["spellsitter.nvim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
+    url = "https://github.com/lewis6991/spellsitter.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
@@ -442,10 +464,10 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
   },
-  ["vim-local-history"] = {
+  ["vim-localhistory"] = {
     loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-local-history",
-    url = "https://github.com/ravenxrz/vim-local-history"
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-localhistory",
+    url = "https://github.com/mg979/vim-localhistory"
   },
   ["vim-log-highlighting"] = {
     loaded = true,
@@ -456,16 +478,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
-  },
-  ["vim-repeat"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-repeat",
-    url = "https://github.com/tpope/vim-repeat"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-test"] = {
     loaded = true,
@@ -495,6 +507,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+try_loadstring("\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\15~/Projects\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0", "config", "auto-session")
+time([[Config for auto-session]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+try_loadstring("\27LJ\2\n>\0\0\4\0\3\0\t6\0\0\0'\2\1\0B\0\2\0016\0\2\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\vnotify\frequire\0", "config", "nvim-notify")
+time([[Config for nvim-notify]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

@@ -1,3 +1,12 @@
+local status_cmp_ok, cmp = pcall(require, "cmp")
+if not status_cmp_ok then
+    return
+end
+local status_luasnip_ok, luasnip = pcall(require, "luasnip")
+if not status_luasnip_ok then
+    return
+end
+
 local check_backspace = function()
     local col = vim.fn.col "." - 1
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
@@ -122,15 +131,6 @@ local is_emmet_active = function()
         end
     end
     return false
-end
-
-local status_cmp_ok, cmp = pcall(require, "cmp")
-if not status_cmp_ok then
-    return
-end
-local status_luasnip_ok, luasnip = pcall(require, "luasnip")
-if not status_luasnip_ok then
-    return
 end
 
 require("luasnip.loaders.from_vscode").lazy_load() -- load freindly-snippets

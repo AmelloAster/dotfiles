@@ -10,10 +10,9 @@ if myFile then
 end
 
 
-local denols = {}
-denols.setup = function(opts)
-    opts.init_options = {
+local denols = {
+    init_options = {
         enable = isDenolsEnable
     }
-end
+}
 return denols

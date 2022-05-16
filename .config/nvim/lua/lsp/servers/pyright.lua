@@ -1,7 +1,7 @@
 local pyright = {}
 
-pyright.setup = function (opts)
-    opts.settings = {
+pyright = {
+    settings = {
 
         python = {
             analysis = {
@@ -9,6 +9,6 @@ pyright.setup = function (opts)
             }
         }
     }
-end
+}
 
 return pyright
