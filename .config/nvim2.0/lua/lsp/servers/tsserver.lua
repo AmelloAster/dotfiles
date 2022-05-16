@@ -1,11 +1,12 @@
 local status_ok, ts_utils = pcall(require, 'nvim-lsp-ts-utils')
 if not status_ok then
-    return {}
+    return
 end
 
-return {
-    init_options = ts_utils.init_options,
-    on_attach = function(client, bufnr)
+local tsserver = {}
+tsserver.setup = function (opts)
+    opts.init_options = ts_utils.init_options
+    opts.on_attach = function(client, bufnr)
         -- defaults
         ts_utils.setup({
             debug = false,
@@ -60,4 +61,6 @@ return {
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
         vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
     end
-}
+end
+
+return tsserver

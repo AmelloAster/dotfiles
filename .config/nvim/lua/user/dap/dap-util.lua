@@ -1,5 +1,5 @@
 local M = {}
-local dap =  require'dap'
+local dap = require 'dap'
 
 function M.reload_continue()
   package.loaded['user.dap.dap-config'] = nil

@@ -8,8 +8,7 @@ for filename in myFile:lines() do
 end
 
 return {
-  
   init_options = {
-    enable = isDenolsEnable 
+    enable = isDenolsEnable
   },
 }
