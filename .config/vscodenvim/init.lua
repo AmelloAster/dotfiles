@@ -1,0 +1,8 @@
+-- require "keymaps"
+-- require "conf"
+-- require "utils"
+-- require "plugins"
+require "options"
+require "vsckeymaps"
+-- require "lsp"
+-- require "colorscheme"

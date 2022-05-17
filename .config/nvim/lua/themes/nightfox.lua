@@ -3,6 +3,13 @@ if not status_ok then
     return
 end
 -- Default options
+local hour = os.date("*t").hour
+local color = 'colorscheme nordfox'
+
+if hour < 18 and hour > 7 then
+    color = 'colorscheme dawnfox'
+end
+
 theme.setup({
     options = {
         -- Compiled file's destination location
@@ -18,9 +25,9 @@ theme.setup({
         terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
         dim_inactive = false, -- Non focused panes set to alternative background
         inverse = { -- Inverse highlight for different types
-            match_paren = true,
-            visual = true,
-            search = true,
+            match_paren = false,
+            visual = false,
+            search = false,
         },
         modules = { -- List of various plugins and additional options
             -- ...
@@ -29,4 +36,4 @@ theme.setup({
 })
 
 -- setup must be called before loading
-vim.cmd("colorscheme nordfox")
+vim.cmd(color)

@@ -44,8 +44,9 @@ local options = {
     diffopt = "vertical,filler,internal,context:4", -- vertical diff split view
     cscopequickfix = "s-,c-,d-,i-,t-,e-", -- cscope output to quickfix window
 }
+vim.g.vscode = true
+vim.opt.shortmess:append "c"
 
-vim.opt.termguicolors = true
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
