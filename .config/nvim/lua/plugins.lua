@@ -88,9 +88,14 @@ return packer.startup(function(use)
     use "akinsho/toggleterm.nvim" -- toggle terminal
     use "ahmedkhalf/project.nvim" -- project manager
     use "folke/which-key.nvim" -- which  key
-    use {
-        "phaazon/hop.nvim", -- like easymotion, but more powerful
-    }
+    -- use {
+    --     "phaazon/hop.nvim", -- like easymotion, but more powerful
+    --     config = function()
+    --         -- you can configure Hop the way you like here; see :h hop-config
+    --         require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    --     end
+    -- }
+    use 'ggandor/lightspeed.nvim'
     use "folke/todo-comments.nvim" -- todo comments
     use "nvim-lualine/lualine.nvim" -- status line
     use "goolord/alpha-nvim" -- welcome page
@@ -236,8 +241,7 @@ return packer.startup(function(use)
     use "alvan/vim-closetag"
 
     -- move
-    use { "asvetliakov/vim-easymotion", as = 'vsc-easymotion' }
-
+    -- use { "asvetliakov/vim-easymotion", as = 'vsc-easymotion' }
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

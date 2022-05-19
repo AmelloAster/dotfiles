@@ -210,11 +210,6 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["hop.nvim"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/hop.nvim",
-    url = "https://github.com/phaazon/hop.nvim"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -224,6 +219,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/lightspeed.nvim",
+    url = "https://github.com/ggandor/lightspeed.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -499,11 +499,6 @@ _G.packer_plugins = {
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vim-ultest",
     url = "https://github.com/rcarriga/vim-ultest"
   },
-  ["vsc-easymotion"] = {
-    loaded = true,
-    path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/vsc-easymotion",
-    url = "https://github.com/asvetliakov/vim-easymotion"
-  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/hexin/.local/share/nvim/site/pack/packer/start/which-key.nvim",
@@ -517,14 +512,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-try_loadstring("\27LJ\2\n>\0\0\4\0\3\0\t6\0\0\0'\2\1\0B\0\2\0016\0\2\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\vnotify\frequire\0", "config", "nvim-notify")
-time([[Config for nvim-notify]], false)
 -- Config for: auto-session
 time([[Config for auto-session]], true)
 try_loadstring("\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\3\0\0\a~/\15~/Projects\1\0\1\14log_level\tinfo\nsetup\17auto-session\frequire\0", "config", "auto-session")
 time([[Config for auto-session]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+try_loadstring("\27LJ\2\n>\0\0\4\0\3\0\t6\0\0\0'\2\1\0B\0\2\0016\0\2\0006\1\0\0'\3\1\0B\1\2\2=\1\1\0K\0\1\0\bvim\vnotify\frequire\0", "config", "nvim-notify")
+time([[Config for nvim-notify]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
