@@ -1,4 +1,4 @@
-theme = "rose_pine_dawn"
+theme = "everforest_dark"
 
 [editor]
 line-number = "relative"
@@ -27,8 +27,8 @@ display-messages = true
 [keys.normal]
 C-s = ":w" # Maps the Control-s to the typable command :w which is an alias for :write (save file)
 C-o = ":open ~/.config/helix/config.toml" # Maps the Control-o to opening of the helix config file
-"A-up" = "move_char_left" # Maps the 'a' key to the move_char_left command
-"A-down" = "move_line_up" # Maps the 'w' key move_line_up
+"A-up" = "move_line_up" # Maps the 'a' key to the move_char_left command
+"A-down" = "move_line_down" # Maps the 'w' key move_line_up
 "C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
 g = { a = "code_action" } # Maps `ga` to show possible code actions
 "ret" = [

@@ -23,21 +23,23 @@ keymap('i', '<A-Up>', "<cmd>call VSCodeNotify('editor.action.moveLinesUpAction')
 keymap('i', '<A-Down>', "<cmd>call VSCodeNotify('editor.action.moveLinesDownActio')<cr>", opts)
 keymap('v', '<A-Up>', "<cmd>call VSCodeNotify('editor.action.moveLinesDownActio')<cr>", opts)
 keymap('v', '<A-Down>', "<cmd>call VSCodeNotify('editor.action.moveLinesDownActio')<cr>", opts)
+
 -- xnoremap <A-j> <Cmd>call VSCodeCallVisual('editor.action.moveLinesDownAction',1)<CR>
 -- Move
 keymap('n', '<A-Left>', '0', opts)
-
 keymap('n', '<A-Right>', '$', opts)
+keymap('n', '<S-h>', "<cmd>call call VSCodeExtensionNotify('move-cursor', 'top')<cr>", opts)
+keymap('n', '<S-m>', "<cmd>call call VSCodeExtensionNotify('move-cursor', 'middle')<cr>", opts)
+keymap('n', '<S-l>', "<cmd>call call VSCodeExtensionNotify('move-cursor', 'bottom')<cr>", opts)
 -- map  <Leader>w <Plug>(easymotion-bd-w)
-keymap('n', '<leader>s', "<Plug>Lightspeed_s", { noremap = false })
-keymap('n', '<leader>w', "<Plug>Lightspeed_S", { noremap = false })
-keymap('v', '<leader>s', "<Plug>Lightspeed_s", { noremap = false })
-keymap('v', '<leader>w', "<Plug>Lightspeed_S", { noremap = false })
-keymap('v', '<space>', "<cmd>call VSCodeNotify('whichkey.show')<cr>", opts)
--- keymap('n', '<leader>l', "<Plug>Lightspeed_T", { noremap = false })
--- keymap('n', '<Space>', "<cmd>call VSCodeNotify('whichkey.show')<cr>", opts)
-keymap('n', 'gd', "<cmd>call VSCodeNotify('editor.action.peekDefinition')<cr>", opts)
-keymap('n', 'gt', "<cmd>call VSCodeNotify('editor.action.revealDefinition')<cr>", opts)
+-- keymap('n', '<leader>s', "<Plug>Lightspeed_s", { noremap = false })
+-- keymap('n', '<leader>w', "<Plug>Lightspeed_S", { noremap = false })
+-- keymap('v', '<leader>s', "<Plug>Lightspeed_s", { noremap = false })
+-- keymap('v', '<leader>w', "<Plug>Lightspeed_S", { noremap = false })
+keymap('n', '<space>', "<cmd>call VSCodeNotify('whichkey.show')<cr>", opts)
+
+keymap('n', 'gv', "<cmd>call VSCodeNotify('editor.action.peekDefinition')<cr>", opts)
+keymap('n', 'gd', "<cmd>call VSCodeNotify('editor.action.revealDefinition')<cr>", opts)
 
 
 keymap('n', 'fg', "<cmd>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})><cr>", opts)

@@ -38,6 +38,10 @@ tsserver = {
             inlay_hints_throttle = 150, -- throttle the inlay hint request
             inlay_hints_format = { -- format options for individual hint kind
                 Type = {
+                    highlight = "Comment",
+                    text = function(text)
+                        return "->" .. text:sub(2)
+                    end,
                 },
                 Parameter = {},
                 Enum = {},

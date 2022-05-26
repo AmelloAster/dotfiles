@@ -22,3 +22,4 @@ lightspeed.setup({
     limit_ft_matches = 4,
     repeat_ft_with_target_char = false,
 })
+lightspeed.init_highlight(true)
