@@ -9,8 +9,13 @@ export TERM='xterm-256color'
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
-
-
+export PF_SEP=":"
+export PF_INFO="ascii title os host kernel wm editor shell uptime pkgs memory palette"
+# export PF_COLOR=1
+# export PF_COL1=4
+# export PF_COL2=9
+# export PF_COL3=1
+export PF_ASCII="openbsd"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -118,7 +123,26 @@ alias brewupa="brew upgrade --all"
 alias brewin="brew install"
 alias brewun="brew uninstall"
 alias brewrm="brew remove"
-alias lazy="lazygit"
+alias lzy="lazygit"
+#alias pm ="pnpm"
+#alias pmi ="pnpm add"
+#alias pmu ="pnpm update"
+#alias pmr ="pnpm remove"
+alias nm="npm"
+alias nmi="npm install"
+alias nmu="npm update"
+alias nmun="npm uninstall"
+alias nms="npm start"
+alias nmr="npm run"
+alias yn="yarn"
+alias yni="yarn add"
+alias yu="yarn upgrade"
+alias yuall="yarn upgrade --latest"
+alias yun="yarn remove"
+alias yunall="yarn remove --production"
+alias aum="source ~/automate.sh"
+alias cgo="cargo"
+
 # autojump alise
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -141,12 +165,12 @@ lg()
 }
 
 # where proxy
-proxy () {
+# proxy () {
     export http_proxy="http://127.0.0.1:7890"
     export https_proxy=$http_proxy
     export socks5_proxy="socks5://127.0.0.1:7890"
     echo "HTTP Proxy on"
-}
+# }
 
 # where noproxy
 noproxy () {
@@ -155,4 +179,17 @@ noproxy () {
     echo "HTTP Proxy off"
 }
 
-neofetch
+# proxy
+
+# pnpm
+export PNPM_HOME="/Users/hexin/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+macchina
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
